@@ -1,5 +1,5 @@
- annotations/
- coco_venv/
- images/
- yolo_format/
- temp*
+annotations/
+coco_venv/
+images/
+yolo_format/
+temp*
