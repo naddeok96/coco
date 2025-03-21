@@ -1,0 +1,118 @@
+class_dag:
+  ORGANIC:
+    - PLANTS:
+      - potted plant
+    - ANIMALS:
+        - PET:
+          - cat
+          - dog
+        - FARM:  
+          - horse
+          - sheep
+          - cow
+        - WILD:
+          - bird
+          - elephant
+          - bear
+          - zebra
+          - giraffe
+
+        - person
+    - FOOD:
+        NATURAL:
+          - banana
+          - apple
+          - orange
+          - broccoli
+          - carrot
+        PROCESSED:
+          - sandwich
+          - hot dog
+          - pizza
+          - donut
+          - cake
+  MANMADE:
+    EITHER:
+      ACCESSORIES:
+        - backpack
+        - umbrella
+        - handbag
+        - tie
+        - suitcase
+    OUTDOOR:
+      TRANSPORT:
+        PERSONAL VEHICLES:
+          TWO WHEELS:
+            - bicycle
+            - motorcycle
+          FOUR WHEELS:
+            - car
+            - truck
+        COMMERCIAL VEHICLES:
+          - bus
+          - train
+          - airplane
+          - boat
+      PUBLIC UTILITIES:
+        - bench
+        - fire hydrant
+        - parking meter
+        - TRAFFIC CONTROL:
+            - traffic light
+            - stop sign
+      ACTIVITY:
+        BALANCE:
+          - skis
+          - snowboard
+          - skateboard
+          - surfboard
+        RECREATIONAL:
+          - frisbee  
+          - kite
+        COMPETITION:
+          - baseball bat
+          - baseball glove
+          - sports ball
+          - tennis racket
+
+    INDOOR:
+      TABLEWARE:
+        - wine glass
+        - cup
+        - bowl
+      UTENSILS:
+        - scissors
+        - fork
+        - knife
+        - spoon
+      PORCELAIN:
+        - toilet
+        - sink
+      FURNITURE:
+        - chair
+        - couch
+        - bed
+        - dining table
+      ELECTRONICS:
+        - tv
+        - laptop
+        - mouse
+        - remote
+        - keyboard
+        - cell phone
+      KITCHEN:
+        - microwave
+        - oven
+        - toaster
+        - refrigerator
+      DECOR:
+        - vase
+        - clock
+        - book
+        - teddy bear
+      PERSONAL CARE:
+        - hair drier
+        - toothbrush    
+        - bottle 
+      
+

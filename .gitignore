@@ -3,3 +3,4 @@ coco_venv/
 images/
 yolo_format/
 temp*
+.vscode/

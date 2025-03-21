@@ -1,0 +1,114 @@
+names:
+  0: ORGANIC
+  1: PLANTS
+  2: potted plant
+  3: ANIMALS
+  4: PET
+  5: cat
+  6: dog
+  7: FARM
+  8: horse
+  9: sheep
+  10: cow
+  11: WILD
+  12: bird
+  13: elephant
+  14: bear
+  15: zebra
+  16: giraffe
+  17: person
+  18: FOOD
+  19: NATURAL
+  20: banana
+  21: apple
+  22: orange
+  23: broccoli
+  24: carrot
+  25: PROCESSED
+  26: sandwich
+  27: hot dog
+  28: pizza
+  29: donut
+  30: cake
+  31: MANMADE
+  32: EITHER
+  33: ACCESSORIES
+  34: backpack
+  35: umbrella
+  36: handbag
+  37: tie
+  38: suitcase
+  39: OUTDOOR
+  40: TRANSPORT
+  41: PERSONAL VEHICLES
+  42: TWO WHEELS
+  43: bicycle
+  44: motorcycle
+  45: FOUR WHEELS
+  46: car
+  47: truck
+  48: COMMERCIAL VEHICLES
+  49: bus
+  50: train
+  51: airplane
+  52: boat
+  53: PUBLIC UTILITIES
+  54: bench
+  55: fire hydrant
+  56: parking meter
+  57: TRAFFIC CONTROL
+  58: traffic light
+  59: stop sign
+  60: ACTIVITY
+  61: BALANCE
+  62: skis
+  63: snowboard
+  64: skateboard
+  65: surfboard
+  66: RECREATIONAL
+  67: frisbee
+  68: kite
+  69: COMPETITION
+  70: baseball bat
+  71: baseball glove
+  72: sports ball
+  73: tennis racket
+  74: INDOOR
+  75: TABLEWARE
+  76: wine glass
+  77: cup
+  78: bowl
+  79: UTENSILS
+  80: scissors
+  81: fork
+  82: knife
+  83: spoon
+  84: PORCELAIN
+  85: toilet
+  86: sink
+  87: FURNITURE
+  88: chair
+  89: couch
+  90: bed
+  91: dining table
+  92: ELECTRONICS
+  93: tv
+  94: laptop
+  95: mouse
+  96: remote
+  97: keyboard
+  98: cell phone
+  99: KITCHEN
+  100: microwave
+  101: oven
+  102: toaster
+  103: refrigerator
+  104: DECOR
+  105: vase
+  106: clock
+  107: book
+  108: teddy bear
+  109: PERSONAL CARE
+  110: hair drier
+  111: toothbrush
+  112: bottle
