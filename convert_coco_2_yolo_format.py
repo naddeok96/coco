@@ -1,14 +1,13 @@
 import os
 import json
+from tqdm import tqdm
 
 # Define paths
 COCO_ANNOTATIONS_DIR = "/data/naddeok/coco/annotations/"
 COCO_IMAGES_DIR = "/data/naddeok/coco/images/"
 YOLO_OUTPUT_DIR = "/data/naddeok/coco/yolo_format/"
 
-# Ensure output directories exist
-os.makedirs(os.path.join(YOLO_OUTPUT_DIR, "train"), exist_ok=True)
-os.makedirs(os.path.join(YOLO_OUTPUT_DIR, "val"), exist_ok=True)
+
 
 # Load COCO JSON annotations
 def load_coco_annotations(json_file):
@@ -31,10 +30,21 @@ def convert_coco_to_yolo(coco_json, image_dir, output_dir):
     images = {img["id"]: img for img in data["images"]}
     annotations = data["annotations"]
     
-    for ann in annotations:
+    # Build a map from COCO category ID to zero-based index
+    cat_id_to_idx = {}
+    for idx, cat in enumerate(data["categories"]):
+        cat_id_to_idx[cat["id"]] = idx
+    
+    # Use tqdm to show progress while converting annotations
+    for ann in tqdm(annotations, desc="Converting annotations"):
         image_id = ann["image_id"]
         bbox = ann["bbox"]
-        category_id = ann["category_id"] - 1  # Convert 1-based to 0-based indexing
+        
+        # Use the lookup map to get the correct zero-based category index
+        if ann["category_id"] not in cat_id_to_idx:
+            continue
+        
+        category_id = cat_id_to_idx[ann["category_id"]]
         
         image_info = images.get(image_id)
         if not image_info:
@@ -46,9 +56,12 @@ def convert_coco_to_yolo(coco_json, image_dir, output_dir):
 
         # Define YOLO label file path
         image_filename = os.path.splitext(image_info["file_name"])[0]
-        label_filepath = os.path.join(output_dir, f"{image_filename}.txt")
+        label_filepath = os.path.join(output_dir, f"labels/{image_filename}.txt")
 
-        # Save label to file
+        # Ensure output directories exist
+        os.makedirs(os.path.join(output_dir, "labels"), exist_ok=True)
+
+        # Save label to file without subtracting 1
         with open(label_filepath, "a") as f:
             f.write(f"{category_id} {' '.join(map(str, yolo_bbox))}\n")
 
